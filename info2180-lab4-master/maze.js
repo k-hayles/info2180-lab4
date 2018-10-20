@@ -1,12 +1,33 @@
 function changeColor (){
-    var boundary = document.getElementById("boundary1").classList.add("youlose");
+  document.getElementById("boundary1").classList.add("youlose");
 }
+
+changeColor();
 
 
 function changeBoundary (){
-var boundary = document.querySelectorAll(".boundary"), i;
+var bound = document.querySelectorAll(".boundary"), i;
 
-for (i = 0; i < boundary.length; ++i) {
-  boundary[i].classList.add("youlose");
+for (i = 0; i < bound.length; i++) {
+  bound[i].classList.add("youlose");
 }
 }
+
+changeBoundary();
+
+//function showMsg(textVal)
+//{
+//document.getElementById("end").innerHTML=textVal;
+//}
+//function clearMsg()
+//{
+//document.getElementById("end").innerHTML="";
+//}
+
+
+function winAlert() {
+    
+    alert("You win!");
+    
+}
+
