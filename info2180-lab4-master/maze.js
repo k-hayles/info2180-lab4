@@ -1,33 +1,22 @@
-function changeColor (){
-  document.getElementById("boundary1").classList.add("youlose");
-}
+var startValue = 0;
+var gameStatus = true;
 
-changeColor();
-
-
-function changeBoundary (){
-var bound = document.querySelectorAll(".boundary"), i;
-
-for (i = 0; i < bound.length; i++) {
-  bound[i].classList.add("youlose");
-}
-}
-
-changeBoundary();
-
-//function showMsg(textVal)
-//{
-//document.getElementById("end").innerHTML=textVal;
-//}
-//function clearMsg()
-//{
-//document.getElementById("end").innerHTML="";
-//}
-
-
-function winAlert() {
+window.onload = function () {
+    document.getElementById("boundary1").onmouseover = start;
     
-    alert("You win!");
-    
-}
+    var bound = document.querySelectorAll(".boundary"); 
+    for (var i = 0; i <bound.length; i++)
+        
+        {
+            bound[i].onmouseover=function()
+            {
+                
+                for (var j=0; j<bound.length; j++)
+                    {
+                        bound[j].className= "boundary youlose";
+                    }
+            }
+        }
+    }
 
+   
